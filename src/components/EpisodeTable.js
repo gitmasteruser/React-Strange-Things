@@ -64,6 +64,7 @@ function TableHead({ setSortBy, sortBy, direction, toggleDirection }) {
 	});
 	return (
 		<thead>
+			<p>Episodes</p>
 			<tr>{items}</tr>
 		</thead>
 	);

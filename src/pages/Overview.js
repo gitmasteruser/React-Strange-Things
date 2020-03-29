@@ -17,7 +17,8 @@ import Background from '../images/strangerthings3.png';
 import Divider2 from '../components/Dividertwo';
 import Snippets from '../components/Snippets';
 import layer from '../images/background.jpg';
-
+import ReactPlayer from 'react-player';
+import Video from '../components/Video';
 
 
 
@@ -50,6 +51,7 @@ const Overview = () => (
 				</Row>
 				<Row center="xs">
 					<Col xs={2} md={1}>
+						<Video />
 						<Divider2 />
 					</Col>
 				</Row>
@@ -122,7 +124,7 @@ const Overview = () => (
 					<Paragraph ></Paragraph>
 					<Locations />
 				</Col>
-				<Col xs={8}>
+				<Col xs={6}>
 					{data.videoembed}
 				</Col>
 			</Row>
