@@ -5,12 +5,12 @@ import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
 
 const Footer = () => (
-	<Section backgroundColor="#e0ebe8">
+	<Section backgroundColor='black'>
 		<Grid>
 			<Row center="xs">
 				<Col xs={12}>
-					<Paragraph>
-						Made with <IoIosHeart style={{ color: "red" }} /> by Rafael Estrella
+					<Paragraph color='white'>
+						Made by Rafael Estrella
           </Paragraph>
 				</Col>
 			</Row>

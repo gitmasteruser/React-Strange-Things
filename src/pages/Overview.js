@@ -8,8 +8,12 @@ import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
 import Divider from '../components/Divider';
 import AudioPlayer from "react-h5-audio-player";
-import Example2 from '../components/Example2';
+import Locations from "../components/Locations";
 import data from "../data/en_US.json";
+import Pic from '../images/strangerthings.JPG';
+import List from "../components/List/List";
+import ListItem from "../components/List/ListItem";
+import Background from '../images/strangerthings3.png';
 
 
 
@@ -28,37 +32,50 @@ const Player = () => (
 	</React.Fragment>
 );
 
-const Home = () => (
+const Overview = () => (
 	<div>
-		<Section backgroundColor="#e0ebe8">
+		<Section style={{
+			backgroundAttachment: 'fixed',
+			backgroundPosition: 'center', backgroundSize: '20%', backgroundRepeat: 'no-repeat', backgroundImage: `url(${Background})`
+		}} >
 			<Grid>
 				<Row center="xs">
-					<Col xs={12}>
-						<Title color="#4ab19a"></Title>
+					<Col xs={12} md={6}>
+						<h2>Award Winning Television Show</h2>
 
-						<Example2 />
+
+
+
+
 					</Col>
 				</Row>
-				<Row bottom="xs" center="xs">
-					<Col xs={12}>
-
+				<Row center="xs">
+					<Col xs={12} md={6}>
+						<List style={{ marginTop: '170px' }}>
+							<ListItem>TV Network:	Netflix</ListItem>
+							<ListItem>Genre: Science Fiction & Fantasy</ListItem>
+							<ListItem>Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</ListItem>
+						</List>
 					</Col>
 				</Row>
 			</Grid>
 		</Section>
 		<Grid>
 			<Row center="xs">
-				<Img sizeX="152px" sizeY="200px" />
+				<Img src={Pic} sizeX="550px" />
+
 				<Col xs={12}>
-					<SubTitle></SubTitle>
-				</Col>
-				<Col xs={12} lg={6}>
+					<Title>
+						{data.heading}
+					</Title>
+
 					<Paragraph>
 
+						{data.description}
 					</Paragraph>
-					<Paragraph>
 
-					</Paragraph>
+					<Locations />
+
 				</Col>
 			</Row>
 			<Row center="xs">
@@ -134,4 +151,4 @@ const Home = () => (
 	</div>
 );
 
-export default Home;
+export default Overview;
