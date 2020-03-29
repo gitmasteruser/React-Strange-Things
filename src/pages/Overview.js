@@ -10,10 +10,14 @@ import Divider from '../components/Divider';
 import AudioPlayer from "react-h5-audio-player";
 import Locations from "../components/Locations";
 import data from "../data/en_US.json";
-import Pic from '../images/strangerthings.JPG';
+import Pic from '../images/popularity.jpg';
 import List from "../components/List/List";
 import ListItem from "../components/List/ListItem";
 import Background from '../images/strangerthings3.png';
+import Divider2 from '../components/Dividertwo';
+import Snippets from '../components/Snippets';
+import layer from '../images/background.jpg';
+
 
 
 
@@ -35,120 +39,95 @@ const Player = () => (
 const Overview = () => (
 	<div>
 		<Section style={{
-			backgroundAttachment: 'fixed',
-			backgroundPosition: 'center', backgroundSize: '20%', backgroundRepeat: 'no-repeat', backgroundImage: `url(${Background})`
+			marginBottom: '100px', backgroundAttachment: 'fixed',
+			backgroundColor: 'black', backgroundPosition: 'center', backgroundSize: '25%', backgroundRepeat: 'no-repeat', backgroundImage: `url(${Background})`
 		}} >
 			<Grid>
 				<Row center="xs">
 					<Col xs={12} md={6}>
 						<h2>Award Winning Television Show</h2>
-
-
-
-
-
 					</Col>
 				</Row>
 				<Row center="xs">
-					<Col xs={12} md={6}>
-						<List style={{ marginTop: '170px' }}>
-							<ListItem>TV Network:	Netflix</ListItem>
-							<ListItem>Genre: Science Fiction & Fantasy</ListItem>
-							<ListItem>Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</ListItem>
-						</List>
+					<Col xs={2} md={1}>
+						<Divider2 />
 					</Col>
 				</Row>
 			</Grid>
 		</Section>
 		<Grid>
-			<Row center="xs">
-				<Img src={Pic} sizeX="550px" />
+			<Row>
 
+
+				<Col xs={6}>
+					<Img src={Pic} style={{ float: 'left' }} sizeX="80%" />
+
+				</Col>
+				<Col xs={6}>
+					<br />
+					<br />
+					<Paragraph>TV Network: Netflix <br /><br />Genre: Science Fiction & Fantasy <br /><br />
+						Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</Paragraph>
+					<Paragraph>Maturity Rating: TV-14<br /><br />
+						Parents strongly cautioned. May not be suitable for ages 14 and under.</Paragraph>
+					<Paragraph>“Stranger Things” is set in 1983, in a Spielbergian small town called Hawkins, Indiana. It follows a group of ordinary people who discover that a gateway to another dimension has opened in the woods, and that a terrifying creature has crawled through it and abducted a little boy</Paragraph>
+
+
+				</Col>
+			</Row>
+
+			<Row center="xs">
+				<Col xs={2} md={1}>
+					<Divider />
+				</Col>
+			</Row>
+
+			<Row center="xs" style={{ backgroundColor: "black" }}>
+
+
+				<Col xs={4}>
+					{/* <Img src={Pic} style={{ float: 'left' }} sizeX="80%" /> */}
+					<Paragraph style={{ color: 'white', textAlign: 'center' }}>Snippets:</Paragraph>
+					<Snippets />
+				</Col>
+				<Col xs={8}>
+					<Img src={layer} sizeX='100%' />
+				</Col>
+			</Row>
+
+			{/* <Row style={{ backgroundSize: 'cover', backgroundImage: `url(${layer})` }} center="xs">
 				<Col xs={12}>
-					<Title>
-						{data.heading}
-					</Title>
+					<Snippets />
+				</Col>
+				<Col xs={12} lg={6}>
 
-					<Paragraph>
 
-						{data.description}
-					</Paragraph>
+				</Col>
+				<Col xs={12} lg={6}>
+					<Paragraph style={{ display: "none" }}> </Paragraph>
+					<Player style={{ display: "none" }} />
+				</Col>
+			</Row> */}
 
+			<Row center="xs">
+				<Col xs={2} md={1}>
+					<Divider />
+				</Col>
+			</Row>
+			<Row center="xs">
+
+
+				<Col xs={4}>
+
+					<Paragraph ></Paragraph>
 					<Locations />
-
+				</Col>
+				<Col xs={8}>
+					{data.videoembed}
 				</Col>
 			</Row>
-			<Row center="xs">
-				<Col xs={2} md={1}>
-					<Divider />
-				</Col>
-			</Row>
-			<LazyLoad height={200} offset={-250}>
-				<Row center="xs">
-					<Col xs={12}>
-						<SubTitle></SubTitle>
-					</Col>
-					<Col xs={12} lg={6}>
-						<Paragraph></Paragraph>
-
-						<Paragraph></Paragraph>
-
-						<Paragraph></Paragraph>
-
-
-						<Paragraph></Paragraph>
-
-					</Col>
-					<Col xs={12} lg={6}>
-						<Paragraph style={{ display: "none" }}> </Paragraph>
-						<Player style={{ display: "none" }} />
-					</Col>
-				</Row>
-			</LazyLoad>
-			<Row center="xs">
-				<Col xs={2} md={1}>
-					<Divider />
-				</Col>
-			</Row>
-			<LazyLoad height={400} offset={-250}>
-				<Row center="xs">
-					<Col xs={12}>
-						<SubTitle></SubTitle>
-					</Col>
-					<Col xs={12} >
-						<Img sizeX="100%" sizeY="100%" max="600px" />
-					</Col>
-				</Row>
-			</LazyLoad>
-			<Row center="xs">
-				<Col xs={2} md={1}>
-					<Divider />
-				</Col>
-			</Row>
-			{/* <LazyLoad height={400} offset={-250}>
-				<Row center="xs">
-					<Col xs={12}>
-						<SubTitle>Companies I have work for</SubTitle>
-					</Col>
-					<Col xs={6} md={4} lg={3}>
-						<Img src={Hilti} sizeX="100%" sizeY="100%" />
-					</Col>
-					<Col xs={6} md={4} lg={3}>
-						<Img src={BankOfAmerica} sizeX="100%" sizeY="100%" />
-					</Col>
-					<Col xs={6} md={4} lg={3}>
-						<Img src={Jpmorgan} sizeX="100%" sizeY="100%" />
-					</Col>
-					<Col xs={6} md={4} lg={3}>
-						<Img src={IBM} sizeX="100%" sizeY="100%" />
-					</Col>
-					<Col xs={6} md={4} lg={3}>
-						<Img src={CapitalOne} sizeX="100%" sizeY="100%" />
-					</Col>
-				</Row>
-			</LazyLoad> */}
 		</Grid>
-	</div>
+	</div >
 );
 
 export default Overview;

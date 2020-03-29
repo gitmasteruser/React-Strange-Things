@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const List = styled.ul`
 	list-style-type: none;
-text-align:center;
+	text-align:center;
 	padding: 0;
 `;
 

@@ -4,7 +4,7 @@ const Divider = styled.p`
 	height: 6px;
 	margin: 100% 0;
 	width: 100%;
-	border-bottom: 9px dotted red;
+	border-bottom: 0px dotted red;
 `;
 
 export default Divider;

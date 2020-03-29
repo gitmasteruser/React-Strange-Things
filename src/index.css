@@ -7,8 +7,16 @@
 
 h2 {
   font: 120 40px/1.8 'Arizonia', Helvetica, sans-serif;
-  color: #2b2b2b;
+  color: white;
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
+  margin-bottom: 150px;
+}
+
+
+h3 {
+  font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
 }
 
 .react-h5-audio-player .toggle-play-wrapper .toggle-play-button {

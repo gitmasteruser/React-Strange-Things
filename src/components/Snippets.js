@@ -9,7 +9,7 @@ class Snippets extends Component {
     render() {
         return (
             <List>
-                {social.map(s => (<ListItem> <br />{s}</ListItem>))}
+                {social.map(s => (<ListItem style={{ marginLeft: '5%' }}> <br />{s}</ListItem>))}
             </List>
         );
     }

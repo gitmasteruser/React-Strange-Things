@@ -9,7 +9,7 @@ class Locations extends Component {
     render() {
         return (
             <List>
-                {Location.map(s => (<ListItem>{s}</ListItem>))}
+                {Location.map(s => (<ListItem style={{ color: "black" }}>{s}</ListItem>))}
             </List>
         );
     }
