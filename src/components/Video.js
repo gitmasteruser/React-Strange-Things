@@ -1,13 +1,18 @@
-
+import React, { Component } from 'react';
 import data from "../data/en_US.json";
-import React, { Component } from 'react'
-import ReactPlayer from 'react-player'
+import { Player } from 'video-react';
+
 
 class Video extends Component {
     render() {
-        return <ReactPlayer url={data.videoembed[0].src} playing />
-    }
-}
+        return (
+            <Player
+                playsInline
+                src={data.videoembed.src}
+            />
 
+        );
+    }
+};
 
 export default Video;

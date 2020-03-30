@@ -11,6 +11,7 @@ import AudioPlayer from "react-h5-audio-player";
 import EpisodeTable from '../components/EpisodeTable';
 import data from "../data/en_US.json";
 import Picture from '../components/Picture';
+
 const Gallery = () => (
     <div>
         <Section backgroundColor="#e0ebe8">

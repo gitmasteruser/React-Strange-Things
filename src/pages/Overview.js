@@ -39,44 +39,57 @@ const Player = () => (
 
 const Overview = () => (
 	<div>
-		<Section style={{
-			marginBottom: '100px', backgroundAttachment: 'fixed',
-			backgroundColor: 'black', backgroundPosition: 'center', backgroundSize: '25%', backgroundRepeat: 'no-repeat', backgroundImage: `url(${Background})`
+		<Section backgroundColor="black" style={{
+			backgroundAttachment: 'fixed',
+			backgroundPosition: 'center', backgroundSize: '45%', backgroundRepeat: 'no-repeat', backgroundImage: `url(${Background})`
 		}} >
 			<Grid>
 				<Row center="xs">
-					<Col xs={12} md={6}>
+					<Col xs={12}>
 						<h2>Award Winning Television Show</h2>
 					</Col>
 				</Row>
 				<Row center="xs">
-					<Col xs={2} md={1}>
-						<Video />
+					<Col xs={4} md={2}>
+
 						<Divider2 />
 					</Col>
 				</Row>
 			</Grid>
 		</Section>
 		<Grid>
-			<Row>
+			<LazyLoad height={200} offset={-250}>
+				<Row center="xs">
+					<Col xs={12} lg={6}>
+						<Paragraph>TV Network: Netflix <br /><br />Genre: Science Fiction & Fantasy <br /><br />
+							Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</Paragraph>
+						<Paragraph>Maturity Rating: TV-14<br /><br />
+							Parents strongly cautioned. May not be suitable for ages 14 and under.</Paragraph>
+						<Paragraph>“Stranger Things” is set in 1983, in a Spielbergian small town called Hawkins, Indiana. It follows a group of ordinary people who discover that a gateway to another dimension has opened in the woods, and that a terrifying creature has crawled through it and abducted a little boy</Paragraph>
+					</Col>
+					<Col xs={12} lg={6}>
 
+						<Img src={Pic} sizeX="100%" sizeY="350px" max="600px" />
+					</Col>
+				</Row>
+			</LazyLoad>
+			{/* <Row justifyContent='center' xs={12}>
 
-				<Col xs={6}>
-					<Img src={Pic} style={{ float: 'left' }} sizeX="80%" />
+				<br />
+				<br />
+				<Paragraph>TV Network: Netflix <br /><br />Genre: Science Fiction & Fantasy <br /><br />
+					Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</Paragraph>
+				<Paragraph>Maturity Rating: TV-14<br /><br />
+					Parents strongly cautioned. May not be suitable for ages 14 and under.</Paragraph>
+				<Paragraph>“Stranger Things” is set in 1983, in a Spielbergian small town called Hawkins, Indiana. It follows a group of ordinary people who discover that a gateway to another dimension has opened in the woods, and that a terrifying creature has crawled through it and abducted a little boy</Paragraph>
 
-				</Col>
-				<Col xs={6}>
-					<br />
-					<br />
-					<Paragraph>TV Network: Netflix <br /><br />Genre: Science Fiction & Fantasy <br /><br />
-						Executive Producers: Matt Duffer, Ross Duffer, Shawn Levy, Dan Cohen, Karl Gajdusek</Paragraph>
-					<Paragraph>Maturity Rating: TV-14<br /><br />
-						Parents strongly cautioned. May not be suitable for ages 14 and under.</Paragraph>
-					<Paragraph>“Stranger Things” is set in 1983, in a Spielbergian small town called Hawkins, Indiana. It follows a group of ordinary people who discover that a gateway to another dimension has opened in the woods, and that a terrifying creature has crawled through it and abducted a little boy</Paragraph>
-
-
-				</Col>
 			</Row>
+			<Row center="xs">
+
+				<Img src={Pic} sizeX="100%" sizeY="350px" max="600px" />
+
+			</Row> */}
+
 
 			<Row center="xs">
 				<Col xs={2} md={1}>
@@ -87,13 +100,13 @@ const Overview = () => (
 			<Row center="xs" style={{ backgroundColor: "black" }}>
 
 
-				<Col xs={4}>
+				<Col xs={6}>
 					{/* <Img src={Pic} style={{ float: 'left' }} sizeX="80%" /> */}
 					<Paragraph style={{ color: 'white', textAlign: 'center' }}>Snippets:</Paragraph>
 					<Snippets />
 				</Col>
-				<Col xs={8}>
-					<Img src={layer} sizeX='100%' />
+				<Col xs={6}>
+					<Img src={layer} sizeX="100%" sizeY="100%" max="600px" />
 				</Col>
 			</Row>
 
@@ -121,14 +134,16 @@ const Overview = () => (
 
 				<Col xs={4}>
 
-					<Paragraph ></Paragraph>
+					<Paragraph >{data.quote.heading}</Paragraph>
+					<Paragraph >{data.quote.description}</Paragraph>
+					<Paragraph >{data.quote.text}</Paragraph>
+					<Paragraph >{data.quote.author}</Paragraph>
 					<Locations />
+
 				</Col>
-				<Col xs={6}>
-					{data.videoembed}
-				</Col>
+
 			</Row>
-		</Grid>
+		</Grid >
 	</div >
 );
 
